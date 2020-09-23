@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>第四个</title>
+</head>
+<body>
+    <h1 th:if="${flag=='yes'}">冯宝宝</h1>
+    <h1 th:unless="${flag=='no'}">张楚岚</h1>
+<br>
+    <div th:switch="${menu}">
+        <span th:case="${manager}">氯雷他定</span>
+        <span th:case="menu">盐酸西替利嗪片</span>
+    </div>
+<br>
+    <!--把片段的内容插入到当前位置-->
+    <div th:insert="~{footer :: copy}"></div>
+    <br>
+    <!--把片段的内容替换掉主页面的样式-->
+    <div th:replace="~{footer :: copy}"></div>
+    <br>
+    <!--只保留主页面的样式，将片段的样式去掉-->
+    <div th:include="~{footer :: copy}"></div>
+</body>
+</html>

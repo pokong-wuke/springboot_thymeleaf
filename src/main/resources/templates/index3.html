@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>第三个</title>
+</head>
+<body>
+    <h1 th:text="${username}"></h1>
+<!--表单控件赋值-->
+<input type="text" th:value="${username}">
+<!--拼接字符串-->
+<span th:text="|欢迎来${username}优就业学习|"></span>
+<!--另一种拼接字符串的方法-->
+<span th:text="'欢迎来'+${username}+'优就业学习'"></span>
+</body>
+</html>
