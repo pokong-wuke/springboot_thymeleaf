@@ -41,7 +41,7 @@ public class FirstController {
     }
     @RequestMapping("/setValue")
     public  String setValue(Model model){
-        model.addAttribute("username","张三");
+        model.addAttribute("username","冯宝宝");
         return  "index3";
 
     }
